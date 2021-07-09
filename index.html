@@ -1,139 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 768px)"
-      href="css/mobile.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen and (max-width: 110px)"
-      href="css/widescreen.css"
-    />
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>EdgeLedger Financial</title>
-  </head>
-  <body id="home">
-    <!-- navbar-->
-    <nav id="navbar">
-      <h1 class="logo">
-        <span class="text-primary"> <i class="fas fa-book-open"></i> Edge </span
-        >Ledger
-      </h1>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#what">What</a></li>
-        <li><a href="#who">Who</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <!--Header-->
-    <header id="showcase">
-      <div class="showcase-content">
-        <h1 class="large-heading">
-          Your Business Needs...Here.
-        </h1>
-        <p class="lead">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non dolor
-          veritatis, earum ad autem eum ipsum, sit doloribus soluta eaque
-          accusamus quasi sapiente consequatur recusandae placeat! Fugit dolores
-          a natus.
-        </p>
-        <div>
-          <a href="#what" class="btn">Read More</a>
-        </div>
-      </div>
-    </header>
-    <!--Section- what we do-->
-    <section id="what" class="bg-light paddingY-1">
-<span class="container">
-  <h2 class="medium-heading text-center"><span class="text-primary">What</span> We Do</h2>
-  <div class="items">
-    <div class="item">
-      <i class="fas fa-university fa-2x"></i>
-        <h3>Investment Banking</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, unde.</p>
-        </div>
-        <div class="item">
-      <i class="fas fa-book-reader fa-2x"></i>
-        <h3>Portfolio Management</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, unde.</p>
-        </div>
-        <div class="item">
-      <i class="fas fa-pencil-alt fa-2x"></i>
-        <h3>Custodial & Tax</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, unde.</p>
-      </div>
-  </div>
-</div>
-    </section>
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="./assets/sass/styles.css">
 
-    <!-- Section:who we are-->
-    <section id="who">
-      <div class="who-img"></div>
-      <div class="who-text bg-dark padding-2">
-        <h2 class="medium-heading"><span class="text-primary">Who</span> We Are</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo alias nemo eius distinctio aperiam id facilis et nulla quos esse dolor architecto modi natus earum praesentium ab harum libero cupiditate nostrum at, fugit magnam aliquam. Praesentium excepturi velit aliquam, voluptatem similique libero neque perspiciatis eligendi, eveniet quod expedita id quos.</p>
-        <h3>Our Team</h3>
-        <ul class="list">
-          <li>Mike: CEO</li>
-          <li>Pedro: CFO</li>
-          <li>Alicia: Lead Accountant</li>
-          <li>Karla: Investment Manager</li>
-          <li>Gupta: Senior Accountant</li>
-        </ul>
-      </div>
-    </section>
-<!--Contact section-->
-<section id="contact">
-  <div class="contact-form bg-primary padding-2">
-    <h2 class="medium-heading">Contact Us</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione deleniti quis consequuntur atque enim accusamus delectus facere nam vitae officia.</p>
-    <form>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="Enter Name">
-      </div>
-      <div class="form-group">
-        <label for="Email">Email</label>
-        <input type="Email" name="Email" id="Email" placeholder="Enter Email">
-      </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea name="message" id="message" placeholder="Enter Message"></textarea>
-      </div>
-      <div>
-      <input type="submit" value="send" class="btn btn-dark"></div>
-    </form>
-  </div>
-  <div class="map"></div>
-</section>
+        <title>Portfolio responsive complete</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Edgar Villatoro</a>
+                </div>
 
-<!--Footer-->
-<footer id="main-footer" class="bg-dark text-center paddingY-1">
-  <div class="conatiner">
-    <p>Copyright &copyright; 2019, EdgeLedger, All Rights Reserved</p>
-  </div>
-</footer>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <!-- <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li> -->
+                        <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-    <script src="js/main.js"></script>
-<!-- Google Maps-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLawGjjsg8dv08dosIfhCegke3sTIhatk&callback=initMap"
-    async defer></script>
-  </body>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home" id="home">
+                <div class="home__container bd-grid">
+                    <h1 class="home__title"><span>Front</span><br>End</h1>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-link">Scroll down</a>
+                    </div>
+
+                    <!-- <img src="assets/img/perfil.png" alt="" class="home__img"> -->
+                    <h1 class="home__title-right"><span>Web</span><br>Developer</h1>
+                </div>
+            </section>
+            
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <!-- <div class="about__img">
+                        <img src="assets/img/perfil.png" alt="">
+                    </div> -->
+
+                    <div class="about-card">
+                        <!-- <h2 class="about-card__title">About Me</h2> -->
+                        <img class="about-card__img" src="https://www.influxmarketing.com/company/team/img/ed.jpg" alt="Edgar Villatoro">
+                      </div>
+
+                    <div>
+                        <h2 class="about__subtitle">Let's Collaborate</h2>
+                        <p class="about__text">
+                           My journey into web development began around 4 years ago, teaching myself the foundamentals of front-end web developement through reading documentation
+                           and watching tutorials.
+                        </p>
+                        <p class="about__text">I've had the privilege of working at an <a class="hover-ancher" href="https://www.influxmarketing.com/">advertising agency</a> with a great team who tought me a great deal, during the past two years. As a developer, I enjoy implementing my thirst for knowledge, my obsessive attention to detail, and my tenacious work ethic to turn problems into solutions. I’m excited for the next chapter and to make a big impact at a high growth company.</p>
+
+                        <div class="skills__box">
+                            <span class="skills__name">Html</span>
+                            <span class="skills__name">Css</span>
+                            <span class="skills__name">Javascript</span>
+                            <span class="skills__name">Sass</span>
+                            <span class="skills__name">Vue</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== SKILLS =====-->
+            <!-- <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
+
+                <div class="skills__container bd-grid">
+                    <div class="skills__box">
+                        <h3 class="skills__subtitle">Front-end</h3>
+                        <span class="skills__name">Html</span>
+                        <span class="skills__name">Css</span>
+                        <span class="skills__name">Javascript</span>
+                        <span class="skills__name">Sass</span>
+                        <span class="skills__name">Vue</span>
+                    </div>
+
+                    <div class="skills__img">
+                        <img src="./assets/img/skills-img.jpg" alt="">
+                    </div>
+                </div>
+            </section> -->
+
+
+            <!--===== PORTFOLIO =====-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Sites I've worked on</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <div class="portfolio__img">
+                        <img src="./assets/img/studio-city.png" alt="">
+                        <a href="https://www.studiocitydentalgroup.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                            Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/pacific-heights.png" alt="">
+                        <a href="https://pacificheightsdentalstudio.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/lakeshore.png" alt="">
+                        <a href="http://lakeshore.boltdental.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/burns-dentistry.png" alt="">
+                        <a href="https://burnsdentistry.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/sf-dental.png" alt="">
+                        <a href="https://sanfranciscodentalcare.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/24th-st-dental.png" alt="">
+                        <a href="https://www.24streetdentalphoenix.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- <section class="portfolio section" id="portfolio">
+                <h2 class="section-title">Personal Projects</h2>
+
+                <div class="portfolio__container bd-grid">
+                    <div class="portfolio__img">
+                        <img src="./assets/img/studio-city.png" alt="">
+                        <a href="https://www.studiocitydentalgroup.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                            Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/pacific-heights.png" alt="">
+                        <a href="https://pacificheightsdentalstudio.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/lakeshore.png" alt="">
+                        <a href="http://lakeshore.boltdental.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/burns-dentistry.png" alt="">
+                        <a href="https://burnsdentistry.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/sf-dental.png" alt="">
+                        <a href="https://sanfranciscodentalcare.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                    <div class="portfolio__img">
+                        <img src="./assets/img/24th-st-dental.png" alt="">
+                        <a href="https://www.24streetdentalphoenix.com/" target="_blank" class="portfolio__link-name">
+                            <div class="portfolio__link">
+                                Visit Site
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- <section class="portfolio section" id="portfolio">
+                <h2 class="section-title" data-tab-target="#personal-examples">Other sites</h2>
+
+                <div class="tab-content">
+                    <div class="portfolio__container bd-grid" id="work-examples" data-tab-content>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/studio-city.png" alt="">
+                            <a href="https://www.studiocitydentalgroup.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/pacific-heights.png" alt="">
+                            <a href="https://pacificheightsdentalstudio.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/lakeshore.png" alt="">
+                            <a href="http://lakeshore.boltdental.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/burns-dentistry.png" alt="">
+                            <a href="https://burnsdentistry.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/sf-dental.png" alt="">
+                            <a href="https://sanfranciscodentalcare.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/24th-st-dental.png" alt="">
+                            <a href="https://www.24streetdentalphoenix.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__container bd-grid" id="personal-examples" data-tab-content>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/studio-city.png" alt="">
+                            <a href="https://www.studiocitydentalgroup.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/pacific-heights.png" alt="">
+                            <a href="https://pacificheightsdentalstudio.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/lakeshore.png" alt="">
+                            <a href="http://lakeshore.boltdental.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/burns-dentistry.png" alt="">
+                            <a href="https://burnsdentistry.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/sf-dental.png" alt="">
+                            <a href="https://sanfranciscodentalcare.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                        <div class="portfolio__img">
+                            <img src="./assets/img/24th-st-dental.png" alt="">
+                            <a href="https://www.24streetdentalphoenix.com/" target="_blank" class="portfolio__link-name">
+                                <div class="portfolio__link">
+                                    Visit Site
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__info">
+                        <h3 class="contact__subtitle">EMAIL</h3>
+                        <span class="contact__text"><a href="mailto:edvillatoro2@gmail.com?subject=portfolio inquiry">Edvillatoro2@gmail.com</a></span>
+                        <h3 class="contact__subtitle">PHONE</h3>
+                        <span class="contact__text"><a href="tel:+1-703-687-8144">(703) 687-8144</a></span>
+
+                        <!-- <h3 class="contact__subtitle">ADRESS</h3>
+                        <span class="contact__text">My contry</span> -->
+                    </div>
+
+                    <form action="https://formsubmit.co/edvillatoro2@gmail.com" method="POST" class="contact__form">
+                        <div class="contact__inputs">
+                            <input type="text" placeholder="Name" class="contact__input">
+                            <input type="email" placeholder="Email" required class="contact__input">
+                        </div>
+
+                        <textarea cols="0" rows="10" class="contact__input" placeholder="Your Message" name="message" required></textarea>
+
+                        <input type="submit" value="Send" class="contact__button">
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">©2021 Edgar Villatoro</h2>
+                </div>
+
+                <!-- <div class="footer__data">
+                    <h2 class="footer__title">EXPLORE</h2>
+                    <ul>
+                        <li><a href="#home" class="footer__link">Home</a></li>
+                        <li><a href="#about" class="footer__link">About</a></li>
+                        <li><a href="#skills" class="footer__link">Skills</a></li>
+                        <li><a href="#portfolio" class="footer__link">Portfolio</a></li>
+                        <li><a href="#Contact" class="footer__link">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__data">
+                    <h2 class="footer__title">FOLLOW</h2>
+                    <a href="#" class="footer__social"><i class='bx bxl-facebook' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-instagram' ></i></a>
+                    <a href="#" class="footer__social"><i class='bx bxl-twitter' ></i></a>
+                </div> -->
+
+
+            </div>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
